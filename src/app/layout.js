@@ -1,6 +1,6 @@
 import Header from "@/Component/Shared/Header";
 import "./globals.css";
-import { ApolloWrapper } from "@/Component/lib/ApolloWrapper";
+import { ApolloWrapper } from "../Component/lib/apolloWrapper.jsx";
 
 
 export const metadata = {
