@@ -1,10 +1,11 @@
-import HeroSection from "@/Component/Pages/HeroSection";
-import React from "react";
+import Character from "@/Component/Pages/Character";
+import Episode from "@/Component/Pages/Episode";
 
 const HomePage = () => {
   return (
     <div>
-      <HeroSection />
+      <Character />
+      <Episode />
     </div>
   );
 };

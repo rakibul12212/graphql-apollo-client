@@ -16,15 +16,40 @@ export const GET_CHARACTER = gql`
         species
         gender
         image
-        location {
-          name
-        }
-        episode {
-          id
-          name
-          air_date
-        }
       }
     }
   }
 `;
+export const GET_Episode = gql`
+  query {
+    episodes {
+      results {
+        id
+        name
+        episode
+        air_date
+      }
+    }
+  }
+`;
+
+// query {
+//   characters(page: 1) {
+//     results {
+//       id
+//       name
+//       status
+//       species
+//       gender
+//       image
+//       location {
+//         name
+//       }
+//       episode {
+//         id
+//         name
+//         air_date
+//       }
+//     }
+//   }
+// }

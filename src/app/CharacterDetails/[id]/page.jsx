@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>details</div>;
+  return <div>character details</div>;
 };
 
 export default page;
