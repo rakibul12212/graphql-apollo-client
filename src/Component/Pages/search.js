@@ -31,12 +31,12 @@ export const Search = () => {
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="border p-2 rounded mr-2"
+        className="border border-[#81E7AF] p-2   outline-none "
         placeholder="Enter character name"
       />
       <button
         onClick={() => getLocation()}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-[#81E7AF] text-black px-4 py-2  "
       >
         Search
       </button>
@@ -47,7 +47,7 @@ export const Search = () => {
       {data?.characters?.results?.length > 0 && (
         <ul className="mt-4 list-disc list-inside">
           {data.characters.results.map((character) => (
-            <li key={character.id}>
+            <li key={character.id} >
               {character.name} — Location: {character.location?.name}
             </li>
           ))}

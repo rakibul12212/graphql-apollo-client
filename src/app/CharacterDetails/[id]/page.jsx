@@ -2,7 +2,6 @@
 
 import { useSingleCharacter } from "@/Component/hooks/useSingleCharacter";
 import { useParams } from "next/navigation";
-import { Search } from "./search";
 
 const Page = () => {
   const { id } = useParams();
@@ -41,7 +40,6 @@ const Page = () => {
           </p>
         </div>
       </div>
-      <Search className='flex justify-center'/>
     </div>
   );
 };
