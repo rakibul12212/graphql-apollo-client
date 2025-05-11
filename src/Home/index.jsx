@@ -3,7 +3,7 @@ import Episode from "@/Component/Pages/Episode";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="bg-[#E9F5BE]">
       <Character />
       <Episode />
     </div>

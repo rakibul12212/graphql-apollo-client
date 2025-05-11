@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { gql, useQuery } from "@apollo/client";
 
 export const GET_CHARACTER = gql`
@@ -7,9 +7,7 @@ export const GET_CHARACTER = gql`
       results {
         id
         name
-        status
-        species
-        gender
+
         image
       }
     }
@@ -18,5 +16,5 @@ export const GET_CHARACTER = gql`
 
 export const useCharacter = () => {
   const { loading, error, data } = useQuery(GET_CHARACTER);
-  return {loading, error, data};
+  return { loading, error, data };
 };
