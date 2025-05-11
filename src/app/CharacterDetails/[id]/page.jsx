@@ -2,6 +2,7 @@
 
 import { useSingleCharacter } from "@/Component/hooks/useSingleCharacter";
 import { useParams } from "next/navigation";
+import { Search } from "./search";
 
 const Page = () => {
   const { id } = useParams();
@@ -20,24 +21,27 @@ const Page = () => {
   const character = data?.character;
 
   return (
-    <div className="px-4 py-10 flex flex-row items-center justify-center gap-x-16 h-screen bg-[#E9F5BE]">
-      <img src={character.image} alt={character.name} className="w-48 " />
-      <div className="flex flex-col leading-10">
-        <h1 className="text-2xl font-bold">{character.name}</h1>
-        <p>
-          <span className="font-semibold">Status:</span> {character.status}
-        </p>
-        <p>
-          <span className="font-semibold">Species:</span> {character.species}
-        </p>
-        <p>
-          <span className="font-semibold">Gender</span>: {character.gender}
-        </p>
-        <p>
-          <span className="font-semibold">Location:</span>
-          {character.location.name}
-        </p>
+    <div className="h-screen bg-[#E9F5BE] ">
+      <div className="px-4 py-10 flex flex-row items-center  gap-x-16 ">
+        <img src={character.image} alt={character.name} className="w-48 " />
+        <div className="flex flex-col leading-10">
+          <h1 className="text-2xl font-bold">{character.name}</h1>
+          <p>
+            <span className="font-semibold">Status:</span> {character.status}
+          </p>
+          <p>
+            <span className="font-semibold">Species:</span> {character.species}
+          </p>
+          <p>
+            <span className="font-semibold">Gender</span>: {character.gender}
+          </p>
+          <p>
+            <span className="font-semibold">Location:</span>
+            {character.location.name}
+          </p>
+        </div>
       </div>
+      <Search className='flex justify-center'/>
     </div>
   );
 };

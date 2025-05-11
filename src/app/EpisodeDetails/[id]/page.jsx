@@ -26,7 +26,7 @@ const Page = () => {
       <h1 className="text-3xl font-bold mb-4"> Episodes</h1>
       <div className="grid grid-cols-2 md:grid-cols-4  gap-4">
         {episodes?.length > 0 ? (
-          episodes.slice(0, 10).map((episode) => (
+          episodes.slice(0, 12).map((episode) => (
             <div key={episode.id} className="bg-[#81E7AF] p-4  shadow">
               <h2 className="text-xl font-semibold">{episode.name}</h2>
               <p>Episode: {episode.episode}</p>
