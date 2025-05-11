@@ -1,18 +1,21 @@
 "use client";
 
-import { useQuery } from "@apollo/client";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import { GET_Episode } from "../api/api";
+import { useEpisode } from "../hooks/useEpisode";
 
 const Episode = () => {
-  const { loading, error, data } = useQuery(GET_Episode);
-
-  if (loading) return <p>Loading...</p>;
+  const { loading, error, data } = useEpisode();
+  if (loading)
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="loader text-center"></div>
+      </div>
+    );
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="py-20">
+    <div className="py-10">
       <h1 className="text-2xl text-center font-semibold pb-10">Episodes </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 py-6 px-5 md:px-10">
         {data?.episodes?.results?.slice(0, 4).map((episode) => (
